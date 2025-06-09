@@ -25,9 +25,17 @@ public class ArrayMainMethod
       int arr7[] = {5,5,7,7,7,8,9,10,10};
       int arr8[] = {1,2,3,4,5,7,8,9,10};
       int arr9[] = {1,2,3,4,5,6,7,8,9,10};
+      int arr10[] = {2,1,1,2,0,0,2,0,0,1,0,2,1,0};
       //Invalid Case
       int arr12[] = {1};
       int arr13[] = {1,4,3,5,3,6,2,3};
+
+      int arr14[] = {1, 5, 10, 20, 40, 80};
+      int arr15[] = {6, 7, 20, 80, 100};
+      int arr16[] = {3, 4, 15, 20, 30, 70, 80, 120};
+      int arr17[] = {1,3,5,3,6,7,8,9,10,2,3,0,-1};
+
+      int[][] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
       int maxElement = getMaxElement(arr);
       System.out.println("Maxium Element in the array is : " + maxElement);
       print("Maximum Element in the array is", maxElement);
@@ -103,7 +111,20 @@ public class ArrayMainMethod
       int maxProduct = MaxProductOf2.getMaxProduct(arr2);
       print("Maximum Product of two elements in the array is", maxProduct);
 
-      int getIndexValue = BinarySearch.binarySearch(arr8, 5);
-      print("Index of the element 5 in the array is", getIndexValue);
+      int indexValue = BinarySearch.binarySearch(arr8, 5);
+      print("Index of the element 5 in the array is", indexValue);
+
+      int[] dnfSort = SortArrayDNF.sortArray(arr10);
+      printArray("Array sorted using Dutch National Flag Algorithm is", dnfSort);
+
+      List<Integer> commons = CommonAmong3Array.getCommon(arr14, arr15, arr16);
+      printValue.printList("\nCommon elements among three arrays are", commons);
+
+      int[][] rotatedMatrix = RotateMatrix90.rotate(matrix);
+      printMatrix("\nMatrix after 90 degree rotation", rotatedMatrix);
+
+      int LongestLengthSubseq = LongestLengthSubsequence.longestLengthSubsequence(arr17);
+      print("Longest Length Subsequence in the array is", LongestLengthSubseq);
+
    }
 }

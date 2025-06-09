@@ -18,6 +18,10 @@ public class printValue
       System.out.println(msg+" : "+value);
    }
 
+   public static void printList(String msg,List<Integer> value){
+      System.out.println(msg+" : "+value);
+   }
+
 
    public static void print(String msg,boolean value){
       System.out.println(msg+" : "+value);
@@ -36,5 +40,15 @@ public class printValue
       System.out.println(msg+ " ");
       for(Map.Entry<Integer,Integer> mapEntry : map.entrySet())
          System.out.println("["+mapEntry.getKey() + ":" + mapEntry.getValue()+"]");
+   }
+
+   public static void printMatrix(String msg, int[][] matrix) {
+      System.out.println(msg + " : ");
+      for (int[] row : matrix) {
+         for (int ele : row) {
+            System.out.print(ele + " ");
+         }
+         System.out.println();
+      }
    }
 }

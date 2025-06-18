@@ -1,0 +1,54 @@
+Tail Recursion
+    - A function that calls itself as its last action.
+    eg factorial(n) = n * factorial(n-1)
+
+Head Recurssion
+    - A function that calls itself as its first action.
+      eg factorial(n) = factorial(n-1) * n
+      eg print numbers from 1 to n using head recursion
+
+Linearly Recursion
+    - A function that calls itself multiple times in a single invocation.
+      eg sum of first n natural numbers using linear recursion
+
+Tree Recursion
+    - A function that calls itself multiple times in a single invocation, creating a tree-like structure.
+      eg Fibonacci series ( 1 call 2 fibbonacci calls )
+
+Direct Recursion
+    - A function that calls itself directly.
+
+Indirect Recursion
+    - A function that calls another function, which in turn calls the first function.
+      eg function A calls function B, and function B calls function A.
+          fun1()
+          {
+                fun2();
+          }
+          fun2()
+          {
+                fun1();
+          }
+Nested Recursion
+    - A function that calls itself within its own definition, often used in algorithms like the Tower of Hanoi.
+      eg    fun()
+            {
+                fun(fun(n));
+            }
+
+Divide and Conquer Recursion
+    - A technique where a problem is divided into smaller subproblems, solved independently, and then combined to form the final solution.
+      eg merge sort, quick sort
+
+
+
+
+
+
+
+ // Comparison of Tail Recursion and Head Recursion
+    - Tail recursion is more efficient than head recursion because it can be optimized by the compiler to avoid creating new stack frames for each recursive call.
+
+    - Head recursion can lead to stack overflow errors for large inputs because it creates a new stack frame for each recursive call, which can quickly exhaust the available stack space.
+
+    - Tail recursion is often used in functional programming languages, while head recursion is more common in imperative languages.

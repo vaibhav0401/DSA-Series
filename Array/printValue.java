@@ -35,6 +35,15 @@ public class printValue
       }
    }
 
+
+   public static void printArray(String msg, String[] arr){
+      System.out.print(msg + " : ");
+      for(String ele : arr)
+      {
+         System.out.print(ele + " ");
+      }
+   }
+
    public static void printMap(String msg, Map<Integer, Integer> map)
    {
       System.out.println(msg+ " ");

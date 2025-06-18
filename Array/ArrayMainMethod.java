@@ -1,5 +1,6 @@
 package Array;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -34,8 +35,14 @@ public class ArrayMainMethod
       int arr15[] = {6, 7, 20, 80, 100};
       int arr16[] = {3, 4, 15, 20, 30, 70, 80, 120};
       int arr17[] = {1,3,5,3,6,7,8,9,10,2,3,0,-1};
+      int arr18[] = {4,9,20,3,10,5,10,5};
+      int arr19[] = {1,3,8,9,15};
+      int arr20[] = {7,11,19,21,22,25};
+      int arr21[] = {3,3,4,2,4,4,2,4,4};
+      String[] arr22 = {"apple", "banana", "cherry", "date", "elderberry"};
 
       int[][] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+      List<Integer> list1= new ArrayList<>(List.of(4,5,6,5,4,3));
       int maxElement = getMaxElement(arr);
       System.out.println("Maxium Element in the array is : " + maxElement);
       print("Maximum Element in the array is", maxElement);
@@ -75,7 +82,7 @@ public class ArrayMainMethod
       printArray("Right Rotated Array by 2 positions", rightRotatedArray);
 
       int[] leftRotatedArray = LeftRotation.leftRotate(arr4, 2);
-      printArray("\nLeft Rotated Array by 2 positions", rightRotatedArray);
+      printArray("\nLeft Rotated Array by 2 positions", leftRotatedArray);
 
       Map<Integer, Integer> frequencyMap = ElementFrequency.getElementFrequency(arr2);
       printMap("\nElement Frequency Map - ", frequencyMap);
@@ -121,10 +128,39 @@ public class ArrayMainMethod
       printValue.printList("\nCommon elements among three arrays are", commons);
 
       int[][] rotatedMatrix = RotateMatrix90.rotate(matrix);
-      printMatrix("\nMatrix after 90 degree rotation", rotatedMatrix);
+      printMatrix("Matrix after 90 degree rotation", rotatedMatrix);
 
       int LongestLengthSubseq = LongestLengthSubsequence.longestLengthSubsequence(arr17);
       print("Longest Length Subsequence in the array is", LongestLengthSubseq);
 
+      int largestElement = LargestElementK.findLargestElement(arr16, 3);
+      print("Kth Largest Element in the array is", largestElement);
+
+      int smallestElement = SmallestElementK.getSmallestElement(arr16, 3);
+      print("kth Smallest Element in the array is", smallestElement);
+
+      int[] reArrangedArray = RearrangeinAlternatePositiveAndNegItems.getRearrangesArray(arr2);
+      printArray("Rearranged Array in alternate positive and negative items", reArrangedArray);
+
+      List<List<Integer>> subArray= SubArraySumEqualToK.getSubArray(arr18, 33);
+      print("\nSubarray with sum equal to 33 is found at index", subArray);
+
+      int median = MedianOf2SortedArray.getMedian(arr19,arr20);
+      print("\nMedian of two sorted arrays is", median);
+
+      List<Integer> freqBasedSortedArray = SortBasedOnFrequency.getSortedArray(list1);
+      printList("\nArray sorted based on frequency of elements", freqBasedSortedArray);
+
+      List<List<Integer>> allPairsEqualToDifference = AllPairEqualToDifference.getAllPairsEqualToDifference(arr13, 3);
+      print("\nAll pairs in the array with difference equal to 3", allPairsEqualToDifference);
+
+      List<List<Integer>> subArraySumEqualTo0= SubArraySumEqualTo0.getSubArray(arr2, 0);
+      print("\nSubarray with sum equal to 0 is found is -", subArraySumEqualTo0);
+
+      int majorityElement = MajorityElementMooresAlgo.getMajoritElement(arr21);
+      print("\nMajority Element in the array is", majorityElement);
+
+      String[] sortedArray = SortBasedOnLenOfString.sortBasedOnLength(arr22);
+      printArray("\nLongest String in the array is", sortedArray);
    }
 }

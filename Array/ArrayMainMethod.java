@@ -40,6 +40,8 @@ public class ArrayMainMethod
       int arr20[] = {7,11,19,21,22,25};
       int arr21[] = {3,3,4,2,4,4,2,4,4};
       String[] arr22 = {"apple", "banana", "cherry", "date", "elderberry"};
+      int[] arr23 = {4,1,2};
+        int[] arr24 = {1, 3,4,2};
 
       int[][] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
       List<Integer> list1= new ArrayList<>(List.of(4,5,6,5,4,3));
@@ -162,5 +164,8 @@ public class ArrayMainMethod
 
       String[] sortedArray = SortBasedOnLenOfString.sortBasedOnLength(arr22);
       printArray("\nLongest String in the array is", sortedArray);
+
+      int[] nextGratestElement = NextGratestElement.nextGreaterElement(arr23, arr24);
+        printArray("\nNext Greatest Element in the array is", nextGratestElement);
    }
 }

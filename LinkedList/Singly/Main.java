@@ -49,5 +49,7 @@ public class Main
       Operations.printList();
 
 
+      Operations.reverse();
+        Operations.printList();
    }
 }

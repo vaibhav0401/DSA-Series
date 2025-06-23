@@ -1,4 +1,4 @@
-package LinkedList.Singly.SlowFastPointer;
+package Algorithms.SlowFastPointer;
 // Slow and Fast pointer
 public class HappyNumber
 {

@@ -1,4 +1,4 @@
-package LinkedList.Singly.SlowFastPointer;
+package Algorithms.SlowFastPointer;
 
 import LinkedList.Singly.Node;
 
